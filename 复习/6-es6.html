@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 面试题 -->
+    <script>
+        var a = 10
+        function foo() {
+            console.log(a);//undefined
+            var a = 20;//var 会变量提升到↑前，但属于未定义
+            window.a = 5;//window.a 属于全局变量，先找当前作用域，找不到再找全局
+            console.log(a);//20
+        }
+        foo();
+        console.log(a);//5  被 window.a 覆盖
+        // 考点：1、作用域链    2、变量提升
+    </script>
+</body>
+</html>
