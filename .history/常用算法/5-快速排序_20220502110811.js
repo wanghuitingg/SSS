@@ -1,0 +1,3 @@
+function quickSo(params) {
+    
+}
