@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            name:'ls',
+            age:18,
+            say:function(msg,msg1){
+                console.log(this,msg,msg1);
+            }
+        }
+        let obj2 = {
+            name:'llllll'
+        }
+        obj.say()
+        obj.say.call(obj2)
+        obj.say("参数1")
+        obj.say.call(obj2,'call','参数2')
+        obj.say.apply(obj2,['apply','参数2'])
+        obj.say.bind(obj2,'bind','xuyao')
+    </script>
+
+</body>
+
+</html>
