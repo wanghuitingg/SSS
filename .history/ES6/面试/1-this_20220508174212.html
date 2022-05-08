@@ -68,41 +68,27 @@
         // fun1();//window,undefined
         // fun2()//window,undefined
 
-        // // 第三题 百度
-        // function Foo(){
-        //     Foo.a = function () {
-        //         console.log(1);
-        //     }
-        //     this.a = function(){
-        //         console.log(2);
-        //     }
-        // }
-        // Foo.prototype.a = function(){
-        //     console.log(3);
-        // }
-        // Foo.a = function(){
-        //     console.log(4);
-        // }
-        // // Foo.a(),函数.a或者构造函数.a,函数也属于一种引用数据类型（且是特殊的对象类型）
-        // Foo.a();//4
-        // // 原型链，先从当前构造函数找，没有再去原型去找，所以是2不是3
-        // let obj = new Foo();
-        // obj.a();//2
-        // // 89行让Foo函数执行，所以4被1覆盖
-        // Foo.a()//1 
-
-        // 第四题 字节
-        var o = {
-            f1: function () {
-                console.log(this);//object  （也就是o
-                var f2 = function () {
-                    console.log(this);//普通函数的this指向window
-                }();//加（）就立即调用
-                // 延伸：改变this指向 ↓
-                // }.call()
+        // 第三题 百度
+        function Foo(){
+            Foo.a = function () {
+                console.log(1);
+            }
+            this.a = function(){
+                console.log(2);
             }
         }
-        o.f1()
+        Foo.prototype.a = function(){
+            console.log(3);
+        }
+        Foo.a = function(){
+            console.log(4);
+        }
+        // Foo.a(),函数.a或者构造函数.a,函数也属于一种引用数据类型（且是特殊的对象类型）
+        Foo.a();//4
+        // 原型链，先从当前构造函数找，没有再去原型去找，所以是2 
+        let obj = new Foo();
+        obj.a();//2
+        Foo.a()
     </script>
 </body>
 

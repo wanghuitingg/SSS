@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // 第一题
+        // window.name = "db"
+        // class A {
+        //     constructor() {
+        //         // 属性
+        //         this.name = "123"
+        //     }
+        //     // 原型下的方法
+        //     getA() {
+        //         console.log(this);
+        //         return this.name + 1
+        //     }
+        // }
+        // // 实例化一个对象
+        // let a = new A();
+        // // getA没有执行(getA()才执行了),getA只是把函数体赋值给了funA
+        // let funcA = a.getA
+        // console.log(funcA());
+
+        // // 输出undefined
+        // /**
+        //  * 在严格模式(use strict)下,this禁止指向window
+        //  * 在类方法及ES6的一些语法里,会默认开启严格模式
+        //  * */
+
+        // // function foo() {
+        // //     console.log(this);
+        // // }
+        // // foo()
+        // // // this指向window
+
+        // // 'use strict'
+        // // function foo() {
+        // //     console.log(this);
+        // // }
+        // // foo()
+        // // // 返回undefined
+
+        // 第二题
+        const a = 1;
+        const obj = {
+            a:2,
+            show1:function(){
+                console.log(this);
+                console.log(this.a);
+            },
+            show2:function{
+                console.log(this);
+                console.log();
+            }
+        }
+    </script>
+</body>
+
+</html>
