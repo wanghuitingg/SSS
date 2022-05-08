@@ -150,25 +150,13 @@
         // let funcA = a.getA;
         // funcA()//this → undefined
 
-        // // 第八题
-        // var a = 1;
-        // function Fn1() {
-        //     var a = 2;
-        //     console.log(this.a + a);
-        // }
-        // function Fn2() {
-        //     var a = 10;
-        //     Fn1()
-        // }
-        // Fn2();
-        // var Fn3 = function () {
-        //     this.a = 3
-        // }
-        // Fn3.prototype = {
-        //     a: 4
-        // }
-        // var fn3 = new Fn3();//3
-        // Fn1.call(fn3)//3+2=5
+        // 第八题
+        var a = 1;
+        function Fn1(){
+            var a = 2;
+            console.log(this.a+a);
+        }
+        function
 
         // // 第九题 滴滴
         //     var number = 1;

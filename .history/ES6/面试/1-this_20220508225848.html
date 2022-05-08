@@ -97,7 +97,7 @@
         //         console.log(this);//object  （也就是o
         //         var f2 = function () {
         //             console.log(this);//普通函数的this指向window
-        //         }.call();//加（）就立即调用
+        //         }();//加（）就立即调用
         //         // 延伸：改变this指向 ↓
         //         // }.call()
         //     }
@@ -117,74 +117,24 @@
         // // var一个变量，变量相当于在window上
         // // foo()相当于window.foo()
         // var foo = obj.add;
-        // foo();//21
+        // foo();
 
-        // // 第六题
-        // window.name = "ByteDance";
-        // function A() {
-        //     this.name = 123
-        // }
-        // A.prototype.getA = function () {
-        //     console.log(this);
-        //     return this.name + 1;
-        // }
-        // // 实例化对象
-        // let a = new A();
-        // // 在调用时决定this指向
-        // let funcA = a.getA;
-        // console.log(funcA());//this → window，ByteDance1
-        // let funcB = a.getA();//this → A(Object)
+        // 第六题
+        window.name = "ByteDance";
 
-        // // 第七题 字节
-        // window.name = "ByteDance";
-        // class A {
-        //     constructor(){
-        //         this.name = 123
-        //     }
-        //     getA(){
-        //         console.log(this);
-        //         return this.name+1
-        //     }
-        // }
-        // let a = new A();
-        // let funcA = a.getA;
-        // funcA()//this → undefined
-
-        // // 第八题
-        // var a = 1;
-        // function Fn1() {
-        //     var a = 2;
-        //     console.log(this.a + a);
-        // }
-        // function Fn2() {
-        //     var a = 10;
-        //     Fn1()
-        // }
-        // Fn2();
-        // var Fn3 = function () {
-        //     this.a = 3
-        // }
-        // Fn3.prototype = {
-        //     a: 4
-        // }
-        // var fn3 = new Fn3();//3
-        // Fn1.call(fn3)//3+2=5
-
-        // // 第九题 滴滴
-        //     var number = 1;
-        //     var obj = {
-        //         number:2,
-        //         getNum:function(){
-        //             var number = 6;
-        //             return this.number
-        //         }
-        //     }
-        //     var getNum = obj.getNum;
-        //     console.log(getNum());//1
-        //     console.log(obj.getNum());//2
-        //     // call不传参，默认window
-        //     console.log(obj.getNum.call());//1
-        //     console.log(obj.getNum.call({ number: 7}));//7
+        function A() {
+            this.name = 123
+        }
+        A.prototype.getA = function () {
+            console.log(this);
+            return this.name + 1;
+        }
+        // 实例化对象
+        let a = new A();
+        // 在调用时决定this指向
+        let funcA = a.getA;
+        console.log(funcA());//this → window，ByteDance
+        
     </script>
 </body>
 
