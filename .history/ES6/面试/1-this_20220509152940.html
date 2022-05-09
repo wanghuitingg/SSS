@@ -157,21 +157,21 @@
         // var fn3 = new Fn3();//3
         // Fn1.call(fn3)//3+2=5
 
-        // // 第八题 滴滴
-        //     var number = 1;
-        //     var obj = {
-        //         number:2,
-        //         getNum:function(){
-        //             var number = 6;
-        //             return this.number
-        //         }
-        //     }
-        //     var getNum = obj.getNum;
-        //     console.log(getNum());//1
-        //     console.log(obj.getNum());//2
-        //     // call不传参，默认window
-        //     console.log(obj.getNum.call());//1
-        //     console.log(obj.getNum.call({ number: 7}));//7
+        // 第八题 滴滴
+            var number = 1;
+            var obj = {
+                number:2,
+                getNum:function(){
+                    var number = 6;
+                    return this.number
+                }
+            }
+            var getNum = obj.getNum;
+            console.log(getNum());//1
+            console.log(obj.getNum());//2
+            // call不传参，默认window
+            console.log(obj.getNum.call());//1
+            console.log(obj.getNum.call({ number: 7}));//7
     </script>
 </body>
 

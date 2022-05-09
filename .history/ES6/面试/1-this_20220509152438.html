@@ -79,8 +79,8 @@
         //         console.log(this.a); //undefined
         //     }
         // }
-        // obj.show1();
-        // obj.show2();
+        // // obj.show1();
+        // // obj.show2();
         // const fun1 = obj.show1;
         // const fun2 = obj.show2;
         // fun1();//window,undefined
@@ -109,13 +109,13 @@
         // // 89行让Foo函数执行，所以4被1覆盖
         // Foo.a()//1 
 
-        // 第四题 字节
+        // // 第四题 字节
         // var o = {
         //     f1: function () {
         //         console.log(this);//object  （也就是o
         //         var f2 = function () {
         //             console.log(this);//普通函数的this指向window
-        //         }();//加（）就立即调用
+        //         }.call();//加（）就立即调用
         //         // 延伸：改变this指向 ↓
         //         // }.call()
         //     }
@@ -137,7 +137,7 @@
         // var foo = obj.add;
         // foo();//21
 
-        // // 第七题
+        // // 第八题
         // var a = 1;
         // function Fn1() {
         //     var a = 2;
@@ -157,7 +157,7 @@
         // var fn3 = new Fn3();//3
         // Fn1.call(fn3)//3+2=5
 
-        // // 第八题 滴滴
+        // // 第九题 滴滴
         //     var number = 1;
         //     var obj = {
         //         number:2,
